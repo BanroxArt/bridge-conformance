@@ -1,0 +1,25 @@
+# bridge-conformance
+
+> Fault-injection harness for services that receive payment and stablecoin status callbacks and post them to a ledger: duplicates, out-of-order events, lost responses and late retries, crashes between writes, stale replays, tampered and forged copies, with invariant checks and shrunk counterexamples. Engineering checklist, not legal advice.
+
+Standard library only. Deliveries are signed with the Standard Webhooks scheme. Three lifecycle models (instant, ach, onchain) and three reference receivers (naive, short-dedupe, careful). Tested on synthetic data only.
+
+Built and maintained by Art Akopian, CEO of Banrox (https://banrox.com).
+
+## Docs
+
+- [README.md](https://github.com/BanroxArt/bridge-conformance/blob/main/README.md): Rules, lifecycles, adapter, what is real and what is not.
+- [docs/sources.md](https://github.com/BanroxArt/bridge-conformance/blob/main/docs/sources.md): Primary sources.
+- [SKILL.md](https://github.com/BanroxArt/bridge-conformance/blob/main/SKILL.md): Agent skill for testing a receiver.
+
+## Source
+
+- [runner.py](https://github.com/BanroxArt/bridge-conformance/blob/main/src/bridgeconf/runner.py): Delivery schedule, retries and the checks.
+- [case.py](https://github.com/BanroxArt/bridge-conformance/blob/main/src/bridgeconf/case.py): Histories and faults.
+- [shrink.py](https://github.com/BanroxArt/bridge-conformance/blob/main/src/bridgeconf/shrink.py): Cutting a failure down.
+- [reference.py](https://github.com/BanroxArt/bridge-conformance/blob/main/src/bridgeconf/reference.py): Reference receivers.
+
+## Optional
+
+- [examples/companions.py](https://github.com/BanroxArt/bridge-conformance/blob/main/examples/companions.py): A receiver built from webhook-verify and idempotency-store.
+- [CHANGELOG](https://github.com/BanroxArt/bridge-conformance/blob/main/CHANGELOG.md): Notable changes.

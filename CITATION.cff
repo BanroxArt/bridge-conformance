@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+type: software
+title: bridge-conformance
+abstract: >-
+  Fault-injection harness for services that turn payment and stablecoin callbacks into ledger entries.
+  Duplicates, out-of-order events, lost responses with late retries, crashes between writes, stale replays and tampered or forged copies, checked against the true history, with shrunk counterexamples. Tested on synthetic data only.
+authors:
+  - family-names: Akopian
+    given-names: Art
+    affiliation: Banrox Inc.
+    email: opensource@banrox.com
+repository-code: https://github.com/BanroxArt/bridge-conformance
+license: MIT
+version: 0.1.0
+date-released: 2026-11-16
+keywords:
+  - webhooks
+  - payments
+  - idempotency
+  - fault-injection
+  - property-based-testing
+  - stablecoin
+  - ach
+  - fednow
